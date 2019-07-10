@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
+import Header from './components/Header';
 import './index.scss';
 
 // Each logical "route" has two components, one for
@@ -29,9 +30,8 @@ const routes = [
 const SidebarExample = () => (
     <Router>
         <div className="page">
-            <div className="page-sidebars">
-                <Sidebar />
-            </div>
+            <Header title="我是首页" />
+            <Sidebar />
             <div className="page-content">
                 <div className="page-title">
                     {routes.map((route, index) => (
