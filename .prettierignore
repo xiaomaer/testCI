@@ -1,0 +1,13 @@
+*.md
+*ignore
+
+.DS_Store
+package-lock.json
+
+.cache
+
+/test/
+/dist/
+/config/
+/node_modules/
+/dll/
