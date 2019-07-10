@@ -30,7 +30,7 @@ const routes = [
 const SidebarExample = () => (
     <Router>
         <div className="page">
-            <Header title="我是首页" />
+            <Header title="我是首页ssfsfs" />
             <Sidebar />
             <div className="page-content">
                 <div className="page-title">
