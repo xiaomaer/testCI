@@ -7,7 +7,9 @@ script:
 deploy:
     provider: pages
     skip_cleanup: true
-    github_token: $GITHUB_TOKEN # Set in the settings page of your repository, as a secure variable
+    github_token: '$GITHUB_TOKEN'
     keep_history: true
     on:
         branch: master
+dd:
+    secure: j096HUdA2XltqfjuBgcladNlpX8/2KMit+6zVTb/7bSliTh1bqWIVaThAHk5K5D5amR8tBf9RVkgwNKoiBhO37lsXMSJoPz3N139E/gmISSJ/xoOStbRgnXMLMpzlUnr7eGDmZ872h4SA7WPnuDX2kHxwvRUgboeCFAcFJF2sT/DIjGL3DodKkrJpv7mSmNje4J6WcyljIKOEGIYORFwp5e7SX561XXHU+2IG7aau5ngwc3o2+/8S215935sQ6UA0yyKuFxv48yVVVOgS8BxFyO3qBwqKUBfSWYSGuYQC8QZ7ZoaL07TUgGP/GuBISbSrBoY3fWV1DZpf/TCSDEE7KhM9rhix+lyfUqZz3W+uB4HT2r9HjzBRa/niHuKPZu4PEtjb6PfuLZMNGFBuC2ZJe6CLDq4ynEUCxmbK+weJm7pncnR6g9Fx6vrfnXJEtJ3tACuoH1Jne080W6X3XAL6FUqUr972FwUKpHC6zP9ZhNBp+ROVXNjKbifull6UOG9rEkgBHCm3mRerR9J/r73psGy8TrthSFJDB6xlw1LyS3l6IFnwcgJMFKpfcFmUw9ajNG01NFV7bcJqjmbNtXnD7cstRz4FWeY4JmTIgRXSXc4GJciEJ5FtewQzhzbQn5Zk/SZPE65pD3gh7JOHZBd9yFgMhfGNXQcWKL7+L0AOMI=
