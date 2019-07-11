@@ -12,7 +12,7 @@ let prodConfig = merge(baseWebpackConfig, {
     mode: 'production',
     devtool: 'hidden-source-map',
     output: {
-        path: path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, '../testCI'),
         filename: '[name].[chunkhash:8].js',
         chunkFilename: '[id].[chunkhash:8].js'
     },
