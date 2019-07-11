@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "allowJs": true,
+        "target": "es2017",
+        "module": "commonjs",
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "moduleResolution": "node",
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "outDir": "dist",
+        "baseUrl": ".",
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true,
+        "lib": ["dom", "esnext"],
+        "paths": {
+            "@api/*": ["src/api/*"],
+            "@components/*": ["src/components/*"],
+            "@constants/*": ["src/constants/*"],
+            "@pages/*": ["src/pages/*"],
+            "@utils/*": ["src/utils/*"]
+        }
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]
+}

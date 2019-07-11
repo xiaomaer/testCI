@@ -1,0 +1,15 @@
+sudo: required
+language: node_js
+node_js:
+- '10'
+script:
+- npm run build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: "$GITHUB_TOKEN"
+  keep_history: true
+  on:
+    branch: master
+dd:
+  secure: Ejt3WrSISNtuJz8TtriU7RmwxfIvBfEXVy/wc1840EGWvh8Gd/1w0kyR7Hrld47aPc1De0vc3ChetHcM3kKpHpANWnhWqbkJjefTJKENInXS99ttumisUS0hdMIZEqqOLbr6Q/XPfWH/hLW8f03ketP8sDSV9nXx7/tlf7Oy7o+pik7NDMeBxJ7yl2HQLg16j9A1Yd/mH5m4ir0ZkH5gHjDlAjlhnuKGwbPej1rVFQQaLy7goepLbKGNG3kvQJgznzzRi0rBHbqRKMyONxUJu+8WyWMhO3QK8l1jcl5HWiukG3Vkc855hCS/r4lg0eLuJHeVpofNjpXUEln+rT6DFhTvKApzhidcYcy9VfcooVkMZtj15B3bJnR9wvk118IcYMPfUr1QfymXZZPynBBNnslZSE8U9w5IWPVLtCVPxt9nlJFn8iIIfPEAC1VCzpKJGfApOTdncytleLOOyyYvslNfKn5Wp8/NnlIAqFpAcCsUpyYyw/QYJERHzAsSUDSE+1KVcsZKTXAc7VfoV7qVQXu/38RhfBYRf3+JWmuKfvIHSDxW89vNQmPyLV0sOdau516lFuinChMpxVjZY3EwyrInzMyD7qkpfsbkJxpcgnO8wDNkou7GJ5t4AOU4xJVWDGy2C0YpKWkWMQpPzt2zwsW2GOVqkcdUpvRrNp5fAik=

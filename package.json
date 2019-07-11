@@ -1,0 +1,120 @@
+{
+    "name": "project-name",
+    "version": "1.0.0",
+    "description": "project description",
+    "scripts": {
+        "dll": "webpack --config config/webpack.config.dll.js",
+        "start": "webpack-dev-server --progress --color --config config/webpack.config.dev.js",
+        "dev": "webpack --config config/webpack.config.dev.js",
+        "build": "webpack --config config/webpack.config.prod.js",
+        "analyze": "NODE_ANALYZE=analyze webpack --config config/webpack.config.prod.js",
+        "lint:es": "eslint --fix --ext .ts,tsx,js,jsx src",
+        "lint:style": "stylelint --fix **/*.{css,sass,scss}",
+        "format:es": "prettier --write **/*.{ts,tsx,js,jsx}",
+        "format:style": "prettier --write **/*.{css,scss,less}",
+        "commit": "git-cz"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -e $GIT_PARAMS"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.{ts,tsx,js,jsx}": [
+            "eslint --fix",
+            "git add"
+        ],
+        "src/**/*.{css,scss,less}": [
+            "prettier --write",
+            "stylelint --fix",
+            "git add"
+        ],
+        "**/*.{md,json}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
+    },
+    "author": "author",
+    "license": "ISC",
+    "dependencies": {
+        "antd": "^3.16.3",
+        "lodash": "^4.17.11",
+        "react": "^16.3.1",
+        "react-dom": "^16.3.1",
+        "react-loadable": "^5.5.0",
+        "react-router-dom": "^4.2.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.0.0",
+        "@babel/plugin-proposal-class-properties": "^7.4.0",
+        "@babel/plugin-proposal-decorators": "^7.4.0",
+        "@babel/plugin-proposal-export-default-from": "^7.2.0",
+        "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "@babel/preset-env": "^7.0.0",
+        "@babel/preset-react": "^7.0.0",
+        "@babel/preset-typescript": "^7.3.3",
+        "@commitlint/cli": "^7.5.2",
+        "@commitlint/config-conventional": "^7.5.0",
+        "@types/react": "^16.8.13",
+        "@types/react-dom": "^16.8.4",
+        "@types/react-loadable": "^5.5.1",
+        "@types/react-router-dom": "^4.3.2",
+        "@typescript-eslint/eslint-plugin": "^1.6.0",
+        "@typescript-eslint/parser": "^1.11.0",
+        "add-asset-html-webpack-plugin": "^3.1.3",
+        "babel-eslint": "^10.0.1",
+        "babel-loader": "^8.0.5",
+        "babel-plugin-import": "^1.11.0",
+        "babel-plugin-lodash": "^3.3.4",
+        "cache-loader": "^3.0.0",
+        "clean-webpack-plugin": "^2.0.1",
+        "commitizen": "^3.0.7",
+        "css-loader": "^2.1.1",
+        "cssnano": "^4.1.10",
+        "cz-conventional-changelog": "^2.1.0",
+        "eslint": "^5.16.0",
+        "eslint-config-alloy": "^2.0.0-alpha.2",
+        "eslint-config-prettier": "^4.1.0",
+        "eslint-loader": "^2.1.2",
+        "eslint-plugin-prettier": "^3.0.1",
+        "eslint-plugin-react": "^7.12.4",
+        "file-loader": "^3.0.1",
+        "friendly-errors-webpack-plugin": "^1.7.0",
+        "happypack": "^5.0.1",
+        "html-webpack-plugin": "^4.0.0-beta.5",
+        "husky": "^1.3.1",
+        "less": "^3.9.0",
+        "less-loader": "^4.1.0",
+        "lint-staged": "^8.1.5",
+        "lodash-webpack-plugin": "^0.11.5",
+        "mini-css-extract-plugin": "^0.6.0",
+        "node-sass": "^4.11.0",
+        "optimize-css-assets-webpack-plugin": "^5.0.1",
+        "os": "^0.1.1",
+        "postcss-import": "^12.0.1",
+        "postcss-loader": "^2.1.6",
+        "postcss-preset-env": "^5.3.0",
+        "prettier": "^1.17.0",
+        "progress-bar-webpack-plugin": "^1.12.1",
+        "sass-loader": "^7.1.0",
+        "speed-measure-webpack-plugin": "^1.3.1",
+        "style-loader": "^0.23.1",
+        "stylelint": "^10.0.1",
+        "stylelint-config-standard": "^18.3.0",
+        "typescript": "^3.4.3",
+        "uglifyjs-webpack-plugin": "^2.1.2",
+        "url-loader": "^1.1.2",
+        "webpack": "^4.30.0",
+        "webpack-bundle-analyzer": "^3.3.2",
+        "webpack-cli": "^3.3.0",
+        "webpack-dev-server": "^3.3.1",
+        "webpack-merge": "^4.2.1"
+    }
+}
