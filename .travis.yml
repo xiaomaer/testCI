@@ -12,6 +12,8 @@ branches:
         - master
 script:
     - npm run build
+    # 使用指令"cp"将当前目录"dist/"下的所有文件复制到根目录
+    - cp -r ./dist/* .
 deploy:
     provider: pages
     skip_cleanup: true
