@@ -2,8 +2,8 @@ import * as React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import WithLoadable from '@components/WithLoadable';
 
-const Main = WithLoadable(() => import('./Main'));
-const Login = WithLoadable(() => import('./Login'));
+const Main = WithLoadable(() => import('@pages/Main'));
+const Login = WithLoadable(() => import('@pages/Login'));
 
 const App = () => (
     <Router basename="/testCI/">
