@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
-import Home from '../Home';
+import Home from '@pages/Home';
 import './index.scss';
 
 // Each logical "route" has two components, one for
