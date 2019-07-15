@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Sidebar from '@components/Sidebar';
-import Header from '@components/Header';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
 import Home from '@pages/Home';
 import './index.scss';
 
@@ -48,7 +48,7 @@ const SidebarExample = () => (
                         // more than multiple <Route>s.
                         <Route
                             key={index}
-                            path={`/testCI${route.path}`}
+                            path={route.path}
                             exact={route.exact}
                             component={() => <Title title={route.title} />}
                         />
@@ -60,7 +60,7 @@ const SidebarExample = () => (
                         // above, but different components this time.
                         <Route
                             key={index}
-                            path={`/testCI${route.path}`}
+                            path={route.path}
                             exact={route.exact}
                             component={route.main}
                         />

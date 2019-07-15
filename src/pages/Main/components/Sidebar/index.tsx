@@ -8,7 +8,7 @@ const Sidebar = () => (
             <li>
                 <NavLink
                     exact
-                    to="/testCI"
+                    to="/"
                     className="page-sidebar-item"
                     activeClassName="page-sidebar-item-active"
                 >
@@ -17,7 +17,7 @@ const Sidebar = () => (
             </li>
             <li>
                 <NavLink
-                    to="/testCI/bubblegum"
+                    to="/bubblegum"
                     className="page-sidebar-item"
                     activeClassName="page-sidebar-item-active"
                 >
@@ -26,7 +26,7 @@ const Sidebar = () => (
             </li>
             <li>
                 <NavLink
-                    to="/testCI/shoelaces"
+                    to="/shoelaces"
                     className="page-sidebar-item"
                     activeClassName="page-sidebar-item-active"
                 >
