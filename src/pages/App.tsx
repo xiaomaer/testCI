@@ -6,7 +6,7 @@ const Main = WithLoadable(() => import('./Main'));
 const Login = WithLoadable(() => import('./Login'));
 
 const App = () => (
-    <Router>
+    <Router basename="/testCI/">
         <Switch>
             <Route path="/login" component={Login} />
             {/* 这样就可以直接访问子路由了 */}

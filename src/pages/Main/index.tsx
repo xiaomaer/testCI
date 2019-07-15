@@ -48,7 +48,7 @@ const SidebarExample = () => (
                         // more than multiple <Route>s.
                         <Route
                             key={index}
-                            path={route.path}
+                            path={`/testCI${route.path}`}
                             exact={route.exact}
                             component={() => <Title title={route.title} />}
                         />
@@ -60,7 +60,7 @@ const SidebarExample = () => (
                         // above, but different components this time.
                         <Route
                             key={index}
-                            path={route.path}
+                            path={`/testCI${route.path}`}
                             exact={route.exact}
                             component={route.main}
                         />

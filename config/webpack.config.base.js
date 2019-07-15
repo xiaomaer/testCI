@@ -119,7 +119,7 @@ module.exports = {
                 // 文件输出目录
                 outputPath: 'lib',
                 // 脚本或链接标记的公共路径
-                publicPath: 'lib'
+                publicPath: '/lib'
             }
         ]),
         new HappyPack({
