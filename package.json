@@ -4,7 +4,7 @@
     "description": "project description",
     "scripts": {
         "dll": "webpack --config config/webpack.config.dll.js",
-        "start": "webpack-dev-server --progress --color --config config/webpack.config.dev.js",
+        "start": "webpack-dev-server --progress --color --hot --config config/webpack.config.dev.js",
         "dev": "webpack --config config/webpack.config.dev.js",
         "build": "webpack --config config/webpack.config.prod.js",
         "analyze": "NODE_ANALYZE=analyze webpack --config config/webpack.config.prod.js",

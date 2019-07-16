@@ -1,10 +1,6 @@
 // 使用AlloyTeam ESLint 规则：https://github.com/AlloyTeam/eslint-config-alloy
 module.exports = {
-    extends: [
-        'eslint-config-alloy/react',
-        'eslint-config-alloy/typescript',
-        'plugin:prettier/recommended'
-    ],
+    extends: ['eslint-config-alloy/react', 'eslint-config-alloy/typescript', 'plugin:prettier/recommended'],
     globals: {
         // 这里填入你的项目需要的全局变量
         // 这里值为 false 表示这个全局变量不允许被重新赋值，比如：
@@ -13,7 +9,8 @@ module.exports = {
     },
     rules: {
         // 这里填入你的项目需要的个性化配置
-        '@typescript-eslint/explicit-member-accessibility': 'off'
+        '@typescript-eslint/explicit-member-accessibility': 'off',
+        '@typescript-eslint/indent': 'off'
     },
     settings: {
         react: {
