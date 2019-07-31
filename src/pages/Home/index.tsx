@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Checkbox from '@components/CheckBox';
+import ReactSortableHoc from '@components/ReactSortableHoc';
 
 const CheckboxGroup = Checkbox.Group;
 
@@ -52,6 +53,10 @@ export default class Home extends React.Component<{}, IHomeState> {
                     value={this.state.checkedList}
                     onChange={this.onChange}
                 />
+
+                <br />
+                <br />
+                <ReactSortableHoc />
             </div>
         );
     }
