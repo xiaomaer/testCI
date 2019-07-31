@@ -1,6 +1,11 @@
 // 使用AlloyTeam ESLint 规则：https://github.com/AlloyTeam/eslint-config-alloy
 module.exports = {
-    extends: ['eslint-config-alloy/react', 'eslint-config-alloy/typescript', 'plugin:prettier/recommended'],
+    extends: [
+        'eslint-config-alloy/react',
+        'eslint-config-alloy/typescript',
+        'plugin:prettier/recommended',
+        'react-hooks'
+    ],
     globals: {
         // 这里填入你的项目需要的全局变量
         // 这里值为 false 表示这个全局变量不允许被重新赋值，比如：
@@ -10,7 +15,9 @@ module.exports = {
     rules: {
         // 这里填入你的项目需要的个性化配置
         '@typescript-eslint/explicit-member-accessibility': 'off',
-        '@typescript-eslint/indent': 'off'
+        '@typescript-eslint/indent': 'off',
+        'react-hooks/rules-of-hooks': 'error', // 检查 Hook 的规则
+        'react-hooks/exhaustive-deps': 'warn' // 检查 effect 的依赖
     },
     settings: {
         react: {
