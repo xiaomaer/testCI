@@ -4,7 +4,7 @@ import arrayMove from 'array-move';
 import CheckBox from '../CheckBox';
 
 const SortableItem = SortableElement(({ item, onChange }) => (
-    <CheckBox value={item.value} onChange={onChange}>
+    <CheckBox value={item.value} checked={item.checked} onChange={onChange}>
         {item.value}
     </CheckBox>
 ));
@@ -20,22 +20,25 @@ const SortableList = SortableContainer(({ items, onChange }) => {
 });
 
 export default class SortableComponent extends Component {
-    state = {
-        items: [
-            {
-                value: '1',
-                checked: false
-            },
-            {
-                value: '2',
-                checked: false
-            },
-            {
-                value: '3',
-                checked: true
-            }
-        ]
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: [
+                {
+                    value: '1',
+                    checked: false
+                },
+                {
+                    value: '2',
+                    checked: false
+                },
+                {
+                    value: '3',
+                    checked: true
+                }
+            ]
+        };
+    }
     onSortEnd = ({ oldIndex, newIndex }) => {
         this.setState(({ items }) => ({
             items: arrayMove(items, oldIndex, newIndex)
@@ -45,7 +48,7 @@ export default class SortableComponent extends Component {
         const target = e.target;
         const value = target.value;
         const checked = target.checked;
-        const newItems = this.state.items((item) => {
+        const newItems = this.state.items.map((item) => {
             if (item.value === value) {
                 return {
                     ...item,
