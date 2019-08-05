@@ -3,7 +3,7 @@ const merge = require('webpack-merge');
 const path = require('path');
 const baseWebpackConfig = require('./webpack.config.base');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin'); // 更好在终端看到webapck运行的警告和错误
-
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const __ROOT = path.resolve(__dirname, '../'); // 根目录;
 
 const port = 9999;
@@ -94,6 +94,10 @@ module.exports = merge(baseWebpackConfig, {
             compilationSuccessInfo: {
                 messages: [`You application is running here http://localhost:${port}`]
             }
-        })
+        }),
+        new MonacoWebpackPlugin({
+            // available options are documented at https://github.com/Microsoft/monaco-editor-webpack-plugin#options
+            languages: ['javascript','css']
+          })
     ]
 });

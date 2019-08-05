@@ -43,9 +43,12 @@
     "author": "author",
     "license": "ISC",
     "dependencies": {
+        "@babel/standalone": "^7.5.5",
+        "@beisen/code-editor": "^1.0.1",
         "antd": "^3.16.3",
         "array-move": "^2.1.0",
         "lodash": "^4.17.11",
+        "monaco-editor-webpack-plugin": "^1.7.0",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "react-loadable": "^5.5.0",

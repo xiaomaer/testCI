@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { SortableContainer, SortableElement } from 'react-sortable-hoc';
 import arrayMove from 'array-move';
 import CheckBox from '../CheckBox';
+import Editor from '@beisen/code-editor';
 
 const SortableItem = SortableElement(({ item, onChange }) => (
     <CheckBox value={item.value} checked={item.checked} onChange={onChange}>
@@ -36,7 +37,8 @@ export default class SortableComponent extends Component {
                     value: '3',
                     checked: true
                 }
-            ]
+            ],
+            code: props.defaultValue || '/* type your code */'
         };
     }
     onSortEnd = ({ oldIndex, newIndex }) => {
@@ -61,13 +63,27 @@ export default class SortableComponent extends Component {
             items: newItems
         });
     };
+    handleChange = (value) => {
+        this.setState({
+            code: value.source
+        });
+    };
     render() {
         return (
-            <SortableList
-                items={this.state.items}
-                onSortEnd={this.onSortEnd}
-                onChange={this.handleChange}
-            />
+            <>
+                <SortableList
+                    items={this.state.items}
+                    onSortEnd={this.onSortEnd}
+                    onChange={this.handleChange}
+                />
+                <Editor
+                    value={this.state.code}
+                    onChange={this.handleChange}
+                    language="javascript"
+                    width="280"
+                    height="500"
+                />
+            </>
         );
     }
 }
