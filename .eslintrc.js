@@ -4,7 +4,8 @@ module.exports = {
     extends: [
         'eslint-config-alloy/react',
         'eslint-config-alloy/typescript',
-        'plugin:prettier/recommended'
+        'prettier/@typescript-eslint', // Uses eslint-config-prettier to disable ESLint rules from @typescript-eslint/eslint-plugin that would conflict with prettier
+        'plugin:prettier/recommended' // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
     ],
     globals: {
         // 这里填入你的项目需要的全局变量
@@ -15,7 +16,6 @@ module.exports = {
     rules: {
         // 这里填入你的项目需要的个性化配置
         '@typescript-eslint/explicit-member-accessibility': 'off',
-        '@typescript-eslint/indent': 'off',
         'react-hooks/rules-of-hooks': 'error', // 检查 Hook 的规则
         'react-hooks/exhaustive-deps': 'warn' // 检查 effect 的依赖
     },
